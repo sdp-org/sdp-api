@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', (req, res) => {
 	const { id } = req.params;
 	const user = req.body;
   Service.update(id, user)

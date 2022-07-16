@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Service = require('./service');
-const Plans = require('./model');
 
 router.get('/', (req, res) => {
 	const { query } = req;
@@ -10,7 +9,7 @@ router.get('/', (req, res) => {
     .catch((err) => res.send(err));
 });
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', (req, res) => {
   const { params, query } = req;
 	const { id } = params;
 	Service.findById({ id, ...query })
@@ -20,7 +19,7 @@ router.get('/:id', (req, res, next) => {
     });
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', (req, res) => {
 	const user = req.body;
 	Service.create(user)
     .then((data) => res.send(data))
@@ -29,7 +28,7 @@ router.post('/', (req, res, next) => {
     });
 })
 
-router.put('/:id', (req, res, next) => {
+router.put('/:id', (req, res) => {
 	const { id } = req.params;
 	const user = req.body;
   Service.update(id, user)
@@ -39,7 +38,7 @@ router.put('/:id', (req, res, next) => {
     });
 });
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', (req, res) => {
 	const { id } = req.params;
 	Service.delete(id)
     .then((data) => res.send(data))
