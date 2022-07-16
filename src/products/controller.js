@@ -1,16 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('./model');
 const Service = require('./service');
 
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
 	const { query } = req;
 	Service.find(query)
     .then((data) => res.send(data))
     .catch((err) => res.send(err));
 });
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', (req, res) => {
 	const { params, query } = req;
 	const { id } = params;
 	Service.findById({ id, ...query })
@@ -29,7 +28,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', (req, res) => {
 	const { id } = req.params;
 	const user = req.body;
   Service.update(id, user)

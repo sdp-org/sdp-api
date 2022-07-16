@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res, next) => {
+router.put('/:id', (req, res) => {
 	const { id } = req.params;
 	const user = req.body;
   Service.update(id, user)
@@ -38,7 +38,7 @@ router.put('/:id', (req, res, next) => {
     });
 });
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', (req, res) => {
 	const { id } = req.params;
 	Service.delete(id)
     .then((data) => res.send(data))
