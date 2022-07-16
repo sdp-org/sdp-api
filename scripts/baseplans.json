@@ -1,0 +1,89 @@
+[{
+  "_id": {
+    "$oid": "614ddc65368e31393cd91f30"
+  },
+  "name": "Ramal Motor - 2.200A",
+  "tasks": [
+    {
+      "name": "Corte de spaguetti",
+      "estimate": 10,
+      "calculated": 13.29
+    },
+    {
+      "name": "Empalme",
+      "observation": "estimate",
+      "estimate": null,
+      "calculated": 8.43
+    }
+  ],
+  "product": "614b30e55bc7a40004b6b428",
+  "active": true,
+  "modifyDate": {
+    "$date": "2022-03-07T01:49:57.745Z"
+  }
+},{
+  "_id": {
+    "$oid": "615085e24649610316aa4db7"
+  },
+  "name": "01 (E 07)",
+  "tasks": [
+    {
+      "name": "Corte de cable",
+      "estimate": "8.36"
+    },
+    {
+      "name": "Corte de spaguetti",
+      "estimate": "11.50"
+    },
+    {
+      "name": "Armado de caja portafusiblera",
+      "estimate": "6.95"
+    },
+    {
+      "name": "Colocación de terminales en cable suelto",
+      "estimate": "30.13"
+    },
+    {
+      "name": "Colocación de cables en portafusiblera",
+      "estimate": "0.85"
+    },
+    {
+      "name": "Empalme",
+      "estimate": "12.50",
+      "calculated": "10.00"
+    },
+    {
+      "name": "Armado",
+      "estimate": 0
+    },
+    {
+      "name": "Colocación de terminales y ficha en cableado armado",
+      "estimate": 0
+    },
+    {
+      "name": "Colocacion de fusibles y relay",
+      "estimate": 0
+    },
+    {
+      "name": "Controlado Final"
+    }
+  ],
+  "product": "61507be54649610316aa4da3"
+},{
+  "_id": {
+    "$oid": "6225646ab82f4829a450cd80"
+  },
+  "name": "Plan de A20",
+  "product": {
+    "$oid": "62255d1797b6a3192a4534b2"
+  },
+  "tasks": [],
+  "active": true,
+  "creationDate": {
+    "$date": "2022-03-07T01:48:08.663Z"
+  },
+  "modifyDate": {
+    "$date": "2022-03-07T01:49:07.319Z"
+  },
+  "__v": 0
+}]
